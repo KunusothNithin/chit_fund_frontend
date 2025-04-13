@@ -13,6 +13,7 @@ import AdminProtectedRoute from "./components/AdminProtectedRoute";
 import PendingUsers from "./pages/PendingUsers";
 import RegisteredUsers from "./pages/RegesteredUsers";
 import AdminLayout from "./pages/AdminLayout";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
       <div className="min-h-screen from-sky-400 to-purple-600 text-white">
         <Navbar />
         <Routes>
+
+          <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Home />} />
           <Route path="/plans" element={<Plans />} />
           <Route path="/events" element={<Events />} />
