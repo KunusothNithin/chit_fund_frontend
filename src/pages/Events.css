@@ -1,0 +1,49 @@
+.events-page {
+    padding: 30px;
+    background: linear-gradient(to bottom right, #fff700, #00c853, #2962ff);
+    min-height: 100vh;
+    color: #222;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .admin-form {
+    background: #ffffffcc;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .admin-form h3 {
+    text-align: center;
+    color: #6a1b9a;
+    margin-bottom: 15px;
+  }
+  
+  .admin-form form input,
+  .admin-form form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .admin-form form button {
+    background-color: #9a57c3;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .admin-form form button:hover {
+    background-color: #4a148c;
+  }
+  

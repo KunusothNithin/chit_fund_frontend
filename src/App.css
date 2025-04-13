@@ -1,0 +1,40 @@
+
+/* QR- Generator */
+
+/* .input-div{
+    display: flex;
+    width: 300px;
+    height: 40px;
+    margin: 20px;
+    gap: 5px;
+
+} */
+
+/* hide password */
+
+.pass-container{
+    top: 30%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+
+}
+
+.input-container{
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    width: 320px;
+}
+
+.input-container input{
+    border: none;
+    outline: 0;
+    height: 100%;
+    width: 280px;
+}
+.input-container .eye{
+    object-fit: cover;
+}
+
