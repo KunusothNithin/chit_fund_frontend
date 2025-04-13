@@ -4,6 +4,7 @@ import { ADMIN_LOGIN } from "../axios/api";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaEnvelope, FaLock } from "react-icons/fa";
+import  Loader  from "../components/Loader";
 
 function AdminLogin() {
   const navigate = useNavigate();
@@ -12,6 +13,7 @@ function AdminLogin() {
     email: "",
     password: "",
   });
+  const [loading , setLoading] = useState(false);
 
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false); // 🔑 for toggling visibility
@@ -54,10 +56,14 @@ function AdminLogin() {
     }
 
     try {
+      setLoading(true);
       const response = await axios.post(ADMIN_LOGIN, {
         email: form.email, 
         password: form.password,
       });
+
+      setLoading(false);
+
 
       if (response.status === 200) {
         toast.success("Admin logged in successfully");
@@ -74,10 +80,19 @@ function AdminLogin() {
       toast.error(
         error?.response?.data?.message || "Something went wrong"
       );
+    } finally {
+      setLoading(false);
     }
   };
 
+  if(loading) {
+    return <Loader />
+  }
+
   return (
+
+
+
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-green-100 via-blue-100 to-yellow-100 px-4">
       <div className="bg-white shadow-xl rounded-2xl p-8 md:p-10 w-full max-w-xl">
         <h1 className="text-3xl font-bold text-center text-green-700">Admin Login</h1>
