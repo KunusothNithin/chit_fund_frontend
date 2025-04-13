@@ -1,4 +1,4 @@
-1export const BASE_URL = `https://chit-fund-backend-evu9.onrender.com/api/v1`;
+export const BASE_URL = `https://chit-fund-backend-evu9.onrender.com/api/v1`;
 
 // admin urls
 export const ADMIN_REGISTER = `${BASE_URL}/admin/register`;
